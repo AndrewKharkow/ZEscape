@@ -9,7 +9,7 @@ namespace ZEscape.Character
     [RequireComponent(typeof(CapsuleCollider))]
     [RequireComponent(typeof(NavMeshAgent))]
 
-    public class CharacterBase : MonoBehaviour
+    public abstract class CharacterBase : MonoBehaviour
     {
        
     }
