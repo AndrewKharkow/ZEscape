@@ -11,6 +11,11 @@ namespace ZEscape.Character
 
     public abstract class CharacterBase : MonoBehaviour
     {
-       
+        public NavMeshAgent NavMeshAgent => GetComponent<NavMeshAgent>();
+
+        public virtual void SendCharacterToPoint(Transform targetPoint)
+        {
+            NavMeshAgent.destination = targetPoint.position;
+        }
     }
 }
