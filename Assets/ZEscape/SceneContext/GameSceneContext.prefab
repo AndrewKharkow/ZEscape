@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 277943fbc3fdb6b4a91e1100d765dbd8, type: 2}
   _monoInstallers:
   - {fileID: 9209601562446437727}
   _installerPrefabs: []
@@ -89,3 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d720e7b3c1c2feb45b4394bcd49cb454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SurvivorPrefab: {fileID: 3684257164352384516, guid: f3f2486936b6a7e42bb46c04e7d5edbf,
+    type: 3}
+  ZombiePrefab: {fileID: 3174731593642768116, guid: dfbafcf31ad7c4d49939cf44b9137dc2,
+    type: 3}
+  GunPrefab: {fileID: 7080458601668041990, guid: 46808ca5e182611428e7ebfd6eddf17c,
+    type: 3}
+  SurvivorsSpeed: 0
+  ZombieSpeed: 0
+  TargetFramesPerSecond: 0

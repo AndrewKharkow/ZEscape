@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722c7b90dfcf96f40983c58fcd791987, type: 3}
+  m_Name: EffectInstaller
+  m_EditorClassIdentifier: 
+  _bulletImpactEffect: {fileID: 6682966196972443871, guid: b2e1e637b9afe4643bce5d8fccda26ff,
+    type: 3}
+  _bonusEffect: {fileID: 6004751737739974542, guid: e272bd661a8042b418f7eb33918a44fd,
+    type: 3}
