@@ -22,5 +22,11 @@ namespace ZEscape.Settings
         [Header("CHARACTER PARAMETERS")]
         public float SurvivorsSpeed;
         public float ZombieSpeed;
+
+        public enum Tags
+        {
+            Survivor = 0,
+            Zombie = 1
+        }
     }
 }
