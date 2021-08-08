@@ -26,7 +26,6 @@ namespace ZEscape.CharacterBuilder
                 CharacterBase survivor;
                 survivor = Instantiate(_settings.SurvivorPrefab, transform);
                 survivor.gameObject.tag = "Survivor";
-                survivor.SendCharacterToPoint(_helicopter.transform);
                 _survivors.Add(survivor); 
             }
         }
@@ -37,6 +36,14 @@ namespace ZEscape.CharacterBuilder
             if(_survivors.Count == 0)
             {
                 CharactersAreOver?.Invoke();
+            }
+        }
+
+        public void RunToEscape()
+        {
+            for (int i = 0; i < _survivors.Count; i++)
+            {
+                _survivors[i].SendCharacterToPoint(_helicopter.transform);
             }
         }
     }
