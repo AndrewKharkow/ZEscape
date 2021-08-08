@@ -27,6 +27,18 @@ namespace ZEscape
         // private GameState CurrentGameState = GameState.Start;
         public void Initialize()
         {
+            _gui.Game.FingerTap += OnFingerTap;
+        }
+
+        private void OnFingerTap(Vector2 tapPosition)
+        {
+            RaycastHit hit;
+            Ray ray = _camera.Camera.ScreenPointToRay(tapPosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                _camera.WeaponPoint.LookAt(hit.point);
+            }
         }
 
         public void Tick()
