@@ -23,6 +23,10 @@ namespace ZEscape.Settings
         public float SurvivorsSpeed;
         public float ZombieSpeed;
 
+        [Space(5)]
+
+        [Header("PERFOMANCE SETTINGS")]
+        public int TargetFramesPerSecond;
         public enum Tags
         {
             Survivor = 0,
