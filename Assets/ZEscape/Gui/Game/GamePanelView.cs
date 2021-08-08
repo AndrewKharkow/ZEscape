@@ -5,6 +5,6 @@ namespace Game.Gui.Game
 {
     public class GamePanelView : MonoBehaviour
     {
-       
+        public Image Aim;
     }
 }

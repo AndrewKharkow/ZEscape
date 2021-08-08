@@ -23,7 +23,7 @@ namespace Game.Gui
 
         private void OnEnable()
         {
-            SetGuiState(GuiState.Start);
+            SetGuiState(GuiState.Game);
         }
 
         public void SetGuiState(GuiState state)
