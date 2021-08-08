@@ -10,11 +10,12 @@ namespace ZEscape.Camera
     {
         [Inject] private SceneSettings _settings;
 
-        [SerializeField] private Transform _weaponPoint = null;
+        public Transform WeaponPoint = null;
+        public UnityEngine.Camera Camera => GetComponent<UnityEngine.Camera>();
 
         private void Start()
         {
-            Instantiate(_settings.GunPrefab, _weaponPoint);
+            Instantiate(_settings.GunPrefab, WeaponPoint);
         }
     }
 }
