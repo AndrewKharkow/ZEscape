@@ -6,6 +6,9 @@ namespace ZEscape.Character
 {
     public class StickmanZombie : CharacterBase
     {
-
+        public void Kill()
+        {
+            Destroy(gameObject);
+        }
     }
 }
