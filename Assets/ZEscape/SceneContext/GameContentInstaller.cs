@@ -1,6 +1,7 @@
 using Game.Gui;
 using UnityEngine;
 using Zenject;
+using ZEscape;
 using ZEscape.Camera;
 using ZEscape.CharacterBuilder;
 using ZEscape.Helicopter;
@@ -15,5 +16,7 @@ public class GameContentInstaller : MonoInstaller
         Container.Bind<GuiHandler>().FromComponentInHierarchy(true).AsSingle();
         Container.Bind<SurvivorBuilder>().FromComponentInHierarchy(true).AsSingle();
         Container.Bind<GameHelicopter>().FromComponentInHierarchy(true).AsSingle();
+
+        Container.BindInterfacesAndSelfTo<GameSceneManager>().AsSingle();
     }
 }
