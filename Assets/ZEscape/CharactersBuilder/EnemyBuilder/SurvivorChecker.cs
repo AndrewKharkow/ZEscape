@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.CharacterBuilder
+namespace ZEscape.CharacterBuilder
 {
     [RequireComponent(typeof(BoxCollider))]
+
     public class SurvivorChecker : MonoBehaviour
     {
         private BoxCollider BoxCollider => GetComponent<BoxCollider>();

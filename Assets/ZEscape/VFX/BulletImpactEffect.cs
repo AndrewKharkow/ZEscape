@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace Game.VFX
+namespace ZEscape.VFX
 {
     public class BulletImpactEffect : MonoBehaviour, IPoolable<Vector3, IMemoryPool>, IDisposable
     {

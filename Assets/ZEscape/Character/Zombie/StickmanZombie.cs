@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Character
+namespace ZEscape.Character
 {
     public class StickmanZombie : CharacterBase
     {
@@ -12,7 +10,7 @@ namespace Game.Character
         }
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.gameObject.tag == "Survivor")
+            if (collision.gameObject.tag == "Survivor")
             {
                 Destroy(collision.gameObject);
             }

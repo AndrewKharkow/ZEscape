@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using Game.Character;
-using Game.CharacterBuilder;
+using ZEscape.Character;
+using ZEscape.CharacterBuilder;
 
 namespace ZEscape.Helicopter
 {

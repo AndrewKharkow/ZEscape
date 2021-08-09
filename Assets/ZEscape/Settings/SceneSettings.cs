@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Game.Character;
 using Game.Weapon;
+using ZEscape.Character;
 
-namespace Game.Settings
+namespace ZEscape.Settings
 {
     public class SceneSettings : MonoBehaviour
     {
@@ -19,18 +17,8 @@ namespace Game.Settings
 
         [Space(5)]
 
-        [Header("CHARACTER PARAMETERS")]
-        public float SurvivorsSpeed;
-        public float ZombieSpeed;
-
-        [Space(5)]
-
         [Header("PERFOMANCE SETTINGS")]
         public int TargetFramesPerSecond;
-        public enum Tags
-        {
-            Survivor = 0,
-            Zombie = 1
-        }
+
     }
 }

@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 using Zenject;
-using Game.Character;
-using Game.CharacterBuilder;
-using Game.Settings;
-using Game.VFX;
 using ZEscape.Gui;
 using ZEscape.Camera;
 using ZEscape.Helicopter;
+using ZEscape.VFX;
+using ZEscape.Settings;
+using ZEscape.CharacterBuilder;
+using ZEscape.Character;
 
 namespace ZEscape
 {
@@ -27,9 +27,13 @@ namespace ZEscape
 
         public void Initialize()
         {
+            Application.targetFrameRate = _settings.TargetFramesPerSecond;
+
             _gui.Start.StartGame += OnStartGame;
             _gui.Game.FingerTap += OnFingerTap;
+
             _survivorBuilder.CharactersAreOver += OnCharactersAreOver;
+
             _gui.FadeEffect();
         }
 

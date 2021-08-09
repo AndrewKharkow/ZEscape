@@ -1,7 +1,7 @@
-using Game.CharacterBuilder;
 using UnityEngine;
+using ZEscape.CharacterBuilder;
 
-namespace Game.Character
+namespace ZEscape.Character
 {
     public class StickmanSurvivor : CharacterBase
     {

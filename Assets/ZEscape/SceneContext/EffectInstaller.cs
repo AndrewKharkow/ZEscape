@@ -1,6 +1,6 @@
 using UnityEngine;
 using Zenject;
-using Game.VFX;
+using ZEscape.VFX;
 
 public class EffectInstaller : ScriptableObjectInstaller<EffectInstaller>
 {

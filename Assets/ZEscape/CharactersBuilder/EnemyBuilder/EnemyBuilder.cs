@@ -1,12 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using Game.Character;
-using Game.Settings;
 using ZEscape.Helicopter;
+using ZEscape.Settings;
+using ZEscape.Character;
 
-namespace Game.CharacterBuilder
+namespace ZEscape.CharacterBuilder
 {
     public class EnemyBuilder : MonoBehaviour
     {
@@ -19,7 +18,7 @@ namespace Game.CharacterBuilder
 
         private void Awake()
         {
-            _survivorChecker.SurvivorOnPlace += OnSurvivorOnPlace;  
+            _survivorChecker.SurvivorOnPlace += OnSurvivorOnPlace;
         }
 
         private void OnSurvivorOnPlace()

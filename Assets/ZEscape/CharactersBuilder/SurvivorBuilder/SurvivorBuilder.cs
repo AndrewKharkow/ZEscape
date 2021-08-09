@@ -1,13 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using Game.Character;
-using Game.Settings;
 using ZEscape.Helicopter;
+using ZEscape.Settings;
+using ZEscape.Character;
 
-namespace Game.CharacterBuilder
+namespace ZEscape.CharacterBuilder
 {
     public class SurvivorBuilder : MonoBehaviour
     {
@@ -21,12 +20,12 @@ namespace Game.CharacterBuilder
 
         private void Start()
         {
-            for(int i = 0; i < _survivorsCount; i++)
+            for (int i = 0; i < _survivorsCount; i++)
             {
                 CharacterBase survivor;
                 survivor = Instantiate(_settings.SurvivorPrefab, transform);
                 survivor.gameObject.tag = "Survivor";
-                _survivors.Add(survivor); 
+                _survivors.Add(survivor);
             }
         }
 
@@ -34,7 +33,7 @@ namespace Game.CharacterBuilder
         {
             _survivors.Remove(survivor);
 
-            if(_survivors.Count == 0)
+            if (_survivors.Count == 0)
             {
                 CharactersAreOver?.Invoke();
             }

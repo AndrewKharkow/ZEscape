@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using Game.Settings;
 using ZEscape.Gui;
+using ZEscape.Settings;
 
 namespace ZEscape.Camera
 {
