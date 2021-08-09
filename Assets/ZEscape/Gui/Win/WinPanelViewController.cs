@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,16 +10,19 @@ namespace ZEscape.Gui
     {
         private WinPanelView View => GetComponent<WinPanelView>();
 
-        private void OnNextLevelButton()
+        private void OnEnable()
         {
-            if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-            else
-            {
-                SceneManager.LoadScene(1);
-            }
+            View.TryAgainButton.onClick.AddListener(OnTryAgainButton);
+        }
+
+        private void OnTryAgainButton()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void OnDisable()
+        {
+            View.TryAgainButton.onClick.RemoveListener(OnTryAgainButton);
         }
     }
 }

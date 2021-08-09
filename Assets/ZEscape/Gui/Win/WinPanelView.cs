@@ -5,6 +5,6 @@ namespace ZEscape.Gui
 {
     public class WinPanelView : MonoBehaviour
     {
-
+        public Button TryAgainButton;
     }
 }

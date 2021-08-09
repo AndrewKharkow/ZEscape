@@ -9,9 +9,19 @@ namespace ZEscape.Gui
     {
         private LosePanelView View => GetComponent<LosePanelView>();
 
-        private void OnRestartGameButtonClick()
+        private void OnEnable()
+        {
+            View.TryAgainButton.onClick.AddListener(OnTryAgainButton);
+        }
+
+        private void OnTryAgainButton()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void OnDisable()
+        {
+            View.TryAgainButton.onClick.RemoveListener(OnTryAgainButton);
         }
     }
 }

@@ -52,6 +52,7 @@ namespace ZEscape
             else
             {
                 _camera.SetCameraState(GameCamera.CameraState.Heli);
+                _gui.SetGuiState(GuiHandler.GuiState.Win);
                 _helicopter.Fly();
                 Debug.Log("Win");
             }
