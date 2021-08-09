@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 using Zenject;
-using ZEscape.Character;
-using ZEscape.CharacterBuilder;
-using ZEscape.Settings;
-using ZEscape.VFX;
+using Game.Character;
+using Game.CharacterBuilder;
+using Game.Settings;
+using Game.VFX;
 using ZEscape.Gui;
 using ZEscape.Camera;
+using ZEscape.Helicopter;
 
 namespace ZEscape
 {
@@ -17,9 +18,9 @@ namespace ZEscape
         [Inject] private SceneSettings _settings;
         [Inject] private GuiHandler _gui;
         [Inject] private SurvivorBuilder _survivorBuilder;
-
         [Inject] private BulletImpactEffect.Factory _bulletImpactFactory;
         [Inject] private BonusEffect.Factory _bonusFactory;
+        [Inject] private GameHelicopter _helicopter;
 
         private const float FireRate = 0.1f;
         private float _fireRateTimer;
@@ -37,16 +38,30 @@ namespace ZEscape
         {
             _gui.Start.StartGame += OnStartGame;
             _gui.Game.FingerTap += OnFingerTap;
+            _survivorBuilder.CharactersAreOver += OnCharactersAreOver;
             _gui.FadeEffect();
+        }
+
+        private void OnCharactersAreOver()
+        {
+            Debug.Log("OnCharactersAreOver");
+            if(_helicopter.SurvivorsCount == 0)
+            {
+                Debug.Log("Lose");
+            }
+            else
+            {
+                _camera.SetCameraState(GameCamera.CameraState.Heli);
+                _helicopter.Fly();
+                Debug.Log("Win");
+            }
         }
 
         private void OnStartGame()
         {
             _survivorBuilder.RunToEscape();
-            _gui.SetGuiState(GuiHandler.GuiState.Game);
             _camera.SetCameraState(GameCamera.CameraState.Game);
-            _gui.FadeEffect();
-
+            _gui.SetGuiState(GuiHandler.GuiState.Game);
         }
 
         private void OnFingerTap(Vector2 tapPosition)

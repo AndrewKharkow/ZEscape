@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ZEscape.Weapon
+namespace Game.Weapon
 {
     public abstract class WeaponBase : MonoBehaviour
     {

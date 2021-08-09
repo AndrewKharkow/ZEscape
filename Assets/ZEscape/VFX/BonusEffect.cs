@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace ZEscape.VFX
+namespace Game.VFX
 {
     public class BonusEffect : MonoBehaviour, IPoolable<Vector3, IMemoryPool>, IDisposable
     {

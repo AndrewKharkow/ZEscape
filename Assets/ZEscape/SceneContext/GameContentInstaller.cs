@@ -1,11 +1,10 @@
-using ZEscape.Gui;
-using UnityEngine;
 using Zenject;
+using Game.CharacterBuilder;
+using Game.Settings;
+using ZEscape.Gui;
 using ZEscape;
 using ZEscape.Camera;
-using ZEscape.CharacterBuilder;
 using ZEscape.Helicopter;
-using ZEscape.Settings;
 
 public class GameContentInstaller : MonoInstaller
 {

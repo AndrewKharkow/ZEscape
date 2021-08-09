@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ZEscape.Character;
-using ZEscape.Weapon;
+using Game.Character;
+using Game.Weapon;
 
-namespace ZEscape.Settings
+namespace Game.Settings
 {
     public class SceneSettings : MonoBehaviour
     {

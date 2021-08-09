@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using ZEscape.Character;
+using Game.Character;
+using Game.Settings;
 using ZEscape.Helicopter;
-using ZEscape.Settings;
 
-namespace ZEscape.CharacterBuilder
+namespace Game.CharacterBuilder
 {
     public class EnemyBuilder : MonoBehaviour
     {

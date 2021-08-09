@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ZEscape.CharacterBuilder
+namespace Game.CharacterBuilder
 {
     [RequireComponent(typeof(BoxCollider))]
     public class SurvivorChecker : MonoBehaviour
