@@ -10,5 +10,12 @@ namespace Game.Character
         {
             Destroy(gameObject);
         }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.tag == "Survivor")
+            {
+                Destroy(collision.gameObject);
+            }
+        }
     }
 }

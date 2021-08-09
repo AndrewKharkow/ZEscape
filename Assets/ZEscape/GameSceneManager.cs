@@ -11,7 +11,7 @@ using ZEscape.Helicopter;
 
 namespace ZEscape
 {
-    public class GameSceneManager : ITickable, IInitializable, IDisposable
+    public class GameSceneManager : IInitializable, IDisposable
     {
 
         [Inject] private GameCamera _camera;
@@ -25,15 +25,6 @@ namespace ZEscape
         private const float FireRate = 0.1f;
         private float _fireRateTimer;
 
-
-        private enum GameState
-        {
-            Start,
-            Game,
-            Win,
-            Lose
-        }
-
         public void Initialize()
         {
             _gui.Start.StartGame += OnStartGame;
@@ -44,17 +35,16 @@ namespace ZEscape
 
         private void OnCharactersAreOver()
         {
-            Debug.Log("OnCharactersAreOver");
             if(_helicopter.SurvivorsCount == 0)
             {
-                Debug.Log("Lose");
+                _camera.SetCameraState(GameCamera.CameraState.SlowMotion);
+                _gui.SetGuiState(GuiHandler.GuiState.Lose);
             }
             else
             {
                 _camera.SetCameraState(GameCamera.CameraState.Heli);
                 _gui.SetGuiState(GuiHandler.GuiState.Win);
                 _helicopter.Fly();
-                Debug.Log("Win");
             }
         }
 
@@ -90,11 +80,6 @@ namespace ZEscape
                     _fireRateTimer = FireRate;
                 }
             }
-        }
-
-        public void Tick()
-        {
-
         }
 
         public void Dispose()

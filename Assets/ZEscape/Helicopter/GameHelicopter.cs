@@ -25,7 +25,6 @@ namespace ZEscape.Helicopter
             if (other.tag == "Survivor")
             {
                 CharacterBase character = other.GetComponent<CharacterBase>();
-                _survivorBuilder.RemoveCharacterFromList(character);
                 SurvivorsCount++;
                 Destroy(other.gameObject);
             }
