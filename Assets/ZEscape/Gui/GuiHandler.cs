@@ -1,10 +1,6 @@
-using Game.Gui.Game;
-using Game.Gui.Lose;
-using Game.Gui.Start;
-using Game.Gui.Win;
 using UnityEngine;
 
-namespace Game.Gui
+namespace ZEscape.Gui
 {
     public class GuiHandler : MonoBehaviour
     {
@@ -20,10 +16,11 @@ namespace Game.Gui
         public GamePanelViewController Game;
         public WinPanelViewController Win;
         public LosePanelViewController Lose;
+        public Fade Fade;
 
         private void OnEnable()
         {
-            SetGuiState(GuiState.Game);
+            SetGuiState(GuiState.Start);
         }
 
         public void SetGuiState(GuiState state)
@@ -55,6 +52,10 @@ namespace Game.Gui
                     Lose.gameObject.SetActive(true);
                     break;
             }
+        }
+        public void FadeEffect()
+        {
+            Fade.gameObject.SetActive(true);
         }
     }
 }

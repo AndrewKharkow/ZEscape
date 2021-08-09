@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
 
-namespace Game.Gui.Game
+namespace ZEscape.Gui
 {
     [RequireComponent(typeof(GamePanelView))]
+
     public class GamePanelViewController : MonoBehaviour
     {
         private GamePanelView View => GetComponent<GamePanelView>();
@@ -29,7 +30,7 @@ namespace Game.Gui.Game
 
         private void Update()
         {
-            if(Input.touchCount == 1)
+            if (Input.touchCount == 1)
             {
                 Touch touch = Input.GetTouch(0);
                 ReplaceAim(touch.deltaPosition.x, touch.deltaPosition.y);
@@ -38,8 +39,8 @@ namespace Game.Gui.Game
 
         public void ReplaceAim(float xSpeed, float ySpeed)
         {
-            _aimPosX += (xSpeed * 50) * Time.deltaTime;
-            _aimPosY += (ySpeed * 50) * Time.deltaTime;
+            _aimPosX += xSpeed * 50 * Time.deltaTime;
+            _aimPosY += ySpeed * 50 * Time.deltaTime;
 
             _aimPosX = Mathf.Clamp(_aimPosX, 0, MaxWith);
             _aimPosY = Mathf.Clamp(_aimPosY, 0, MaxHeight);

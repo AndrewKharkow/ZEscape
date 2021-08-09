@@ -28,7 +28,6 @@ namespace ZEscape.CharacterBuilder
             {
                 _zombies[i].gameObject.SetActive(true);
                 _zombies[i].SendCharacterToPoint(_helicopter.transform);
-                _zombies.Remove(_zombies[i]);
             }
         }
 

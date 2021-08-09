@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Gui.Lose
+namespace ZEscape.Gui
 {
     public class LosePanelView : MonoBehaviour
     {

@@ -1,12 +1,12 @@
-using Game.Gui;
 using System;
 using UnityEngine;
 using Zenject;
-using ZEscape.Camera;
 using ZEscape.Character;
 using ZEscape.CharacterBuilder;
 using ZEscape.Settings;
 using ZEscape.VFX;
+using ZEscape.Gui;
+using ZEscape.Camera;
 
 namespace ZEscape
 {
@@ -33,10 +33,20 @@ namespace ZEscape
             Lose
         }
 
-        // private GameState CurrentGameState = GameState.Start;
         public void Initialize()
         {
+            _gui.Start.StartGame += OnStartGame;
             _gui.Game.FingerTap += OnFingerTap;
+            _gui.FadeEffect();
+        }
+
+        private void OnStartGame()
+        {
+            _survivorBuilder.RunToEscape();
+            _gui.SetGuiState(GuiHandler.GuiState.Game);
+            _camera.SetCameraState(GameCamera.CameraState.Game);
+            _gui.FadeEffect();
+
         }
 
         private void OnFingerTap(Vector2 tapPosition)
@@ -47,15 +57,15 @@ namespace ZEscape
             if (Physics.Raycast(ray, out hit))
             {
                 _camera.WeaponPoint.LookAt(hit.point);
-                if(_fireRateTimer > 0)
+                if (_fireRateTimer > 0)
                 {
                     _fireRateTimer -= Time.deltaTime;
                 }
-                if(_fireRateTimer <= 0)
+                if (_fireRateTimer <= 0)
                 {
                     _bulletImpactFactory.Create(hit.point);
 
-                    if(hit.transform.gameObject.tag == "Zombie")
+                    if (hit.transform.gameObject.tag == "Zombie")
                     {
                         StickmanZombie zombie = hit.transform.gameObject.GetComponent<StickmanZombie>();
                         _bonusFactory.Create(zombie.transform.position);
@@ -68,16 +78,13 @@ namespace ZEscape
 
         public void Tick()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("RUN");
-                _survivorBuilder.RunToEscape();
-            }
+
         }
 
         public void Dispose()
         {
-
+            _gui.Start.StartGame += OnStartGame;
+            _gui.Game.FingerTap += OnFingerTap;
         }
     }
 }

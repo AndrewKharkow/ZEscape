@@ -1304,37 +1304,37 @@ PrefabInstance:
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.230627
+      value: -20.537891
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 101.55998
+      value: 91.41984
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.177542
+      value: 5.3062897
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5498935
+      value: -0.9697349
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.121531904
+      value: 0.090146236
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.80687815
+      value: -0.22593547
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17831126
+      value: -0.021002555
       objectReference: {fileID: 0}
     - target: {fileID: 132695907798510678, guid: 2dadfa2abd5226149888b27bf9c83f48,
         type: 3}
@@ -1381,6 +1381,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b098456eca782f0a77f881e696a67b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1939193846
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939193840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fbc44ee7dfd7424b9820cd4c759a065, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1988953682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1393,24 +1412,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSceneContext
       objectReference: {fileID: 0}
-    - target: {fileID: 7426774244978474382, guid: a5010fb5120541e4483a73e9aaad1238,
-        type: 3}
-      propertyPath: GunPrefab
-      value: 
-      objectReference: {fileID: 7080458601668041990, guid: 46808ca5e182611428e7ebfd6eddf17c,
-        type: 3}
-    - target: {fileID: 7426774244978474382, guid: a5010fb5120541e4483a73e9aaad1238,
-        type: 3}
-      propertyPath: ZombiePrefab
-      value: 
-      objectReference: {fileID: 3174731593642768116, guid: dfbafcf31ad7c4d49939cf44b9137dc2,
-        type: 3}
-    - target: {fileID: 7426774244978474382, guid: a5010fb5120541e4483a73e9aaad1238,
-        type: 3}
-      propertyPath: SurvivorPrefab
-      value: 
-      objectReference: {fileID: 3684257164352384516, guid: f3f2486936b6a7e42bb46c04e7d5edbf,
-        type: 3}
     - target: {fileID: 9211632804193348755, guid: a5010fb5120541e4483a73e9aaad1238,
         type: 3}
       propertyPath: m_RootOrder

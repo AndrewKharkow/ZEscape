@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game.Gui.Game
+namespace ZEscape.Gui
 {
     public class GamePanelView : MonoBehaviour
     {

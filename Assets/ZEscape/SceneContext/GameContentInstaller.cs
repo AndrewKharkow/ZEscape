@@ -1,4 +1,4 @@
-using Game.Gui;
+using ZEscape.Gui;
 using UnityEngine;
 using Zenject;
 using ZEscape;
