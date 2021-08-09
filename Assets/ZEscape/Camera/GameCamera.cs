@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using ZEscape.Settings;
+using Game.Settings;
+using ZEscape.Gui;
 
 namespace ZEscape.Camera
 {
@@ -16,6 +17,7 @@ namespace ZEscape.Camera
         }
 
         [Inject] private SceneSettings _settings;
+        [Inject] private GuiHandler _gui;
         private Animator Animator => GetComponent<Animator>();
         public Transform WeaponPoint = null;
         public UnityEngine.Camera Camera => GetComponent<UnityEngine.Camera>();
@@ -31,13 +33,17 @@ namespace ZEscape.Camera
             switch (cameraState)
             {
                 case CameraState.Game:
+                    _gui.FadeEffect();
                     Animator.SetTrigger("Start");
                     Time.timeScale = 1;
                     break;
                 case CameraState.SlowMotion:
+                    _gui.FadeEffect();
                     Time.timeScale = 0.5f;
                     break;
                 case CameraState.Heli:
+                    _gui.FadeEffect();
+                    Animator.SetTrigger("Heli");
                     Time.timeScale = 1;
                     break;
             }
